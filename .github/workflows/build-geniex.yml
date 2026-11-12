@@ -1,6 +1,7 @@
 name: Build GenieX APK
 
 on:
+  push:
   workflow_dispatch:
 
 jobs:
@@ -15,9 +16,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
 
       - name: Build Debug APK
         working-directory: geniex_chat_android
